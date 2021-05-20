@@ -1,0 +1,27 @@
+{
+  "name": "accordion-search",
+  "version": "1.0.0",
+  "description": "Accordion with a search box",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "webpack --mode=production --optimize-minimize",
+    "dev-js": "webpack --mode=development --watch",
+    "build-css": "sass ./src/assets/sass/style.scss ./dist/accordion-search.css --style compressed --no-source-map && postcss style.css --replace --use autoprefixer",
+    "dev-css": "sass ./src/assets/sass/style.scss ./dist/accordion-search.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricDevWP/accordion-search.git"
+  },
+  "author": "Cédric Chevillard <cedric.chevillard@cedricchevillard.fr> (https://cedricchevillard.fr)",
+  "license": "ISC",
+  "devDependencies": {
+    "mark.js": "^8.11.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
+}

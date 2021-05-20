@@ -1,0 +1,186 @@
+:root {
+  --search-input-background: transparent;
+  --search-input-text: #333333;
+  --search-input-placeholder: #757575;
+  --search-input-border: #cacaca;
+  --search-input-search-btn: #333333;
+  --search-input-clear-btn: #cc0000;
+  --search-suggestion-box-title: #333333;
+  --search-suggestion-box-item-background: #f4f4f4;
+  --search-suggestion-box-item-text: #333333;
+  --search-suggestion-box-item-hover-background: #dbdbdb;
+  --search-suggestion-box-item-hover-text: #333333;
+  --search-result-background: #f4f4f4;
+  --search-result-text: #333333;
+  --accordion-title-background: #f4f4f4;
+  --accordion-title-text: #333333;
+  --accordion-title-hover-background: #dbdbdb;
+  --accordion-title--hover-text: #333333;
+  --accordion-content-background: transparent;
+  --accordion-content-text: inherit;
+  --accordion-content-background-found: #333333;
+  --accordion-content-text-found: #f4f4f4;
+  --accordion-btn-all-background: #f4f4f4;
+  --accordion-btn-all-text: #333333;
+  --accordion-btn-all-hover-background: #dbdbdb;
+  --accordion-btn-all-hover-text: #333333;
+  --accordion-btn-pagination-background: #f4f4f4;
+  --accordion-btn-pagination-text: #333333;
+  --accordion-btn-pagination-hover-background: #dbdbdb;
+  --accordion-btn-pagination-hover-text: #333333;
+  --accordion-btn-pagination-active-background: #dbdbdb;
+  --accordion-btn-pagination-active-text: #333333;
+}
+
+.as-d-none {
+  display: none !important;
+}
+
+.as-cursor-pointer {
+  cursor: pointer;
+}
+
+.as .as-search_container {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+.as .as-search_container .as-search__input {
+  padding: 10px 35px 10px 10px;
+  border: 1px solid var(--search-input-border);
+  border-radius: 25px;
+  background: var(--search-input-background);
+  outline: 0;
+  width: 100%;
+}
+.as .as-search_container .as-search__input::placeholder {
+  color: var(--search-input-placeholder);
+}
+.as .as-search_container .as-search__search_btn,
+.as .as-search_container .as-search__clear_btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.as .as-search_container .as-search__clear_btn {
+  right: 15px;
+  cursor: pointer;
+}
+.as .as-search_container .as-search__search_btn {
+  right: 40px;
+}
+
+.as .as-search-result {
+  margin-bottom: 10px;
+  background: var(--search-result-background);
+  color: var(--search-result-text);
+  padding: 10px 35px 10px 10px;
+  border-radius: 10px;
+}
+
+.as .as-search-suggestion-box {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.as .as-search-suggestion-box .as-search-suggestion-box__title {
+  color: var(--search-suggestion-box-title);
+}
+.as .as-search-suggestion-box .as-search-suggestion-box__items {
+  display: flex;
+}
+.as .as-search-suggestion-box .as-search-suggestion-box__items > * {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--search-suggestion-box-item-text);
+  background: var(--search-suggestion-box-item-background);
+  transition: background 200ms linear;
+  cursor: pointer;
+}
+.as .as-search-suggestion-box .as-search-suggestion-box__items > *:hover {
+  color: var(--search-suggestion-box-item-hover-text);
+  background: var(--search-suggestion-box-item-hover-background);
+}
+
+.as .as-accordion + .as-accordion {
+  margin-top: 10px;
+}
+.as .as-accordion.as-accordion-pagination-hide {
+  display: none !important;
+}
+.as .as-accordion .as-accordion__title {
+  background: var(--accordion-title-background);
+  color: var(--accordion-title-text);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background 200ms linear;
+  margin: 0;
+}
+.as .as-accordion .as-accordion__title:hover {
+  background: var(--accordion-title-hover-background);
+  color: var(--accordion-title-hover-text);
+}
+.as .as-accordion .as-accordion__title > .as-accordion__title-icon {
+  margin-right: 10px;
+}
+.as .as-accordion .as-accordion__content {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--accordion-content-background);
+  color: var(--accordion-content-text);
+}
+.as .as-accordion mark {
+  background: var(--accordion-content-background-found);
+  color: var(--accordion-content-text-found);
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+.as .as-accordion-pagination,
+.as .as-accordion-btn-all {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px 10px 10px;
+}
+.as .as-accordion-pagination > *,
+.as .as-accordion-btn-all > * {
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 200ms linear;
+}
+
+.as .as-accordion-btn-all > * {
+  background: var(--accordion-btn-all-background);
+  color: var(--accordion-btn-all-text);
+}
+.as .as-accordion-btn-all > *:hover {
+  background: var(--accordion-btn-all-hover-background);
+  color: var(--accordion-btn-all-hover-text);
+}
+.as .as-accordion-btn-all .as-accordion-btn-all__open {
+  margin-right: 10px;
+}
+
+.as .as-accordion-pagination > * {
+  background: var(--accordion-btn-pagination-background);
+  color: var(--accordion-btn-pagination-text);
+}
+.as .as-accordion-pagination > *.as-accordion-pagination__active {
+  background: var(--accordion-btn-pagination-active-background);
+  color: var(--accordion-btn-pagination-active-text);
+}
+.as .as-accordion-pagination > *:hover {
+  background: var(--accordion-btn-pagination-hover-background);
+  color: var(--accordion-btn-pagination-hover-text);
+}
+.as .as-accordion-pagination > * + * {
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=accordion-search.css.map */

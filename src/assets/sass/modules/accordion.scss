@@ -1,0 +1,94 @@
+.as .as-accordion{
+    & + .as-accordion {
+        margin-top: 10px;
+    }
+
+    &.as-accordion-pagination-hide{
+        display: none !important;
+    }
+
+    .as-accordion__title{
+        background: var(--accordion-title-background);
+        color: var(--accordion-title-text);
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: background 200ms linear;
+        margin: 0;
+
+        &:hover{
+            background: var(--accordion-title-hover-background);
+            color: var(--accordion-title-hover-text);
+        }
+
+        > .as-accordion__title-icon{
+            margin-right: 10px;
+        }
+    }
+    .as-accordion__content{
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: var(--accordion-content-background);
+        color: var(--accordion-content-text);
+    }
+
+    mark{
+        background: var(--accordion-content-background-found);
+        color: var(--accordion-content-text-found);
+        border-radius: 10px;
+        padding: 2px 5px;
+    }
+
+}
+
+.as .as-accordion-pagination,
+.as .as-accordion-btn-all{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px 10px 10px;
+
+    > * {
+        text-align: center;
+        border-radius: 25px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background 200ms linear;
+    }
+}
+
+.as .as-accordion-btn-all{
+    > * {
+        background: var(--accordion-btn-all-background);
+        color: var(--accordion-btn-all-text);
+
+        &:hover{
+            background: var(--accordion-btn-all-hover-background);
+            color: var(--accordion-btn-all-hover-text);
+        }
+    }
+
+    .as-accordion-btn-all__open{
+        margin-right: 10px;
+    }
+}
+
+.as .as-accordion-pagination{
+    > * {
+        background: var(--accordion-btn-pagination-background);
+        color: var(--accordion-btn-pagination-text);
+
+        &.as-accordion-pagination__active{
+            background: var(--accordion-btn-pagination-active-background);
+            color: var(--accordion-btn-pagination-active-text);
+        }
+        
+        &:hover{
+            background: var(--accordion-btn-pagination-hover-background);
+            color: var(--accordion-btn-pagination-hover-text);
+        }
+
+        + *{
+            margin-left: 10px;
+        }
+    }
+}

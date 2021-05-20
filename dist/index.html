@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="accordion-search.css">
+    <style>
+        .as .as-accordion p{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .as .as-search-suggestion-box p{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-accordion-search" class="as">
+        <div class="as-search_container">
+            <input class="as-search__input" type="text" value="" placeholder="Lorem ipsum dolor sit amet"/>
+            <span class="as-search__search_btn"></span>
+            <span class="as-search__clear_btn"></span>
+        </div>
+
+        <div class="as-search-result"></div>
+
+        <section class="as-accordion">
+            <h2 class="as-accordion__title">Titre 1</h2>
+            <div class="as-accordion__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum lectus velit, elementum luctus felis tincidunt in. Praesent libero nunc, ultricies ac metus id, blandit laoreet velit. Duis quis rhoncus nibh, vitae iaculis tortor. Donec id pretium sapien. Aliquam congue dui ac malesuada euismod. Mauris pretium efficitur felis aliquet sodales. Ut ac consectetur nibh. Quisque sit amet viverra eros. Nullam a est id mi volutpat accumsan sed vitae nibh. Mauris tincidunt aliquam metus id eleifend. Morbi placerat sem sapien, id blandit purus gravida sit amet. Nullam fermentum vitae turpis eget ullamcorper. Vestibulum efficitur maximus nisl. Nunc in tortor quis risus ullamcorper mollis in a turpis. Maecenas a consectetur felis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat sapien, porttitor sed placerat ac, eleifend quis ipsum. Nulla eget ex nec sapien volutpat convallis. Morbi turpis dui, imperdiet quis dolor fermentum, sagittis cursus risus. Etiam at felis vehicula, aliquet augue vitae, mattis metus. Morbi ac dolor ut lectus venenatis ornare nec tristique urna. Nunc consectetur nulla vitae lorem fringilla dictum. Integer vitae finibus ligula. Nunc massa justo, posuere eu nibh at, mollis ornare velit. Nam id rutrum orci, vitae feugiat ex. Morbi pretium eget lacus sed ornare. Nullam nec mattis ex. Cras nec scelerisque nibh. Mauris a tellus dictum, egestas eros finibus, consectetur nisi.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum lectus velit, elementum luctus felis tincidunt in. Praesent libero nunc, ultricies ac metus id, blandit laoreet velit. Duis quis rhoncus nibh, vitae iaculis tortor. Donec id pretium sapien. Aliquam congue dui ac malesuada euismod. Mauris pretium efficitur felis aliquet sodales. Ut ac consectetur nibh. Quisque sit amet viverra eros. Nullam a est id mi volutpat accumsan sed vitae nibh. Mauris tincidunt aliquam metus id eleifend. Morbi placerat sem sapien, id blandit purus gravida sit amet. Nullam fermentum vitae turpis eget ullamcorper. Vestibulum efficitur maximus nisl. Nunc in tortor quis risus ullamcorper mollis in a turpis. Maecenas a consectetur felis.
+                </p>
+            </div>
+        </section>
+        <section class="as-accordion">
+            <h2 class="as-accordion__title">Titre 2</h2>
+            <div class="as-accordion__content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat sapien, porttitor sed placerat ac, eleifend quis ipsum. Nulla eget ex nec sapien volutpat convallis. Morbi turpis dui, imperdiet quis dolor fermentum, sagittis cursus risus. Etiam at felis vehicula, aliquet augue vitae, mattis metus. Morbi ac dolor ut lectus venenatis ornare nec tristique urna. Nunc consectetur nulla vitae lorem fringilla dictum. Integer vitae finibus ligula. Nunc massa justo, posuere eu nibh at, mollis ornare velit. Nam id rutrum orci, vitae feugiat ex. Morbi pretium eget lacus sed ornare. Nullam nec mattis ex. Cras nec scelerisque nibh. Mauris a tellus dictum, egestas eros finibus, consectetur nisi.
+                </p>
+            </div>
+        </section>
+    </div>
+    <script src="./accordion-search.js"></script>
+    <script>
+
+    let accordionSearch = new AccordionSearch( document.getElementById( 'my-accordion-search' ), {
+        searchOnClick: true,
+        searchOnlyTitle: false,
+        caseSensitive: false,
+        btnOpenCloseAll: true,
+        itemsOpened:[1],
+        suggestionBox: true,
+        suggestionBoxTitle: 'Popular Searches:',
+        suggestionBoxKeywords: [ 'Titre 1', 'Titre 2', 'Titre 3', '..'],
+        pagination: true,
+        paginationLimit: 1
+    } )
+
+    </script>
+</body>
+</html>
