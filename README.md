@@ -89,7 +89,7 @@ const accordionSearch = new AccordionSearch( document.getElementById( 'my-accord
 } )
 ```
 
-## Availables configurations
+## Availables configurations JS
 
 ```js
 {
@@ -124,6 +124,47 @@ You can change icons if you don't use Font-Awesome solid
 
 ```js
 window.AccordionSearchConfig
+```
+## Availables customization CSS
+
+You can edit css like you want but you can directly custom color different elements by editing the colors of the css variables.
+
+Default variables :
+
+```css
+:root {
+    --search-input-background:                      transparent;
+    --search-input-text:                            #333333;
+    --search-input-placeholder:                     #757575;
+    --search-input-border:                          #cacaca;
+    --search-input-search-btn:                      #333333;
+    --search-input-clear-btn:                       #cc0000;
+    --search-suggestion-box-title:                  #333333;
+    --search-suggestion-box-item-background:        #f4f4f4;
+    --search-suggestion-box-item-text:              #333333;
+    --search-suggestion-box-item-hover-background:  #dbdbdb;
+    --search-suggestion-box-item-hover-text:        #333333;
+    --search-result-background:                     #f4f4f4;
+    --search-result-text:                           #333333;
+    --accordion-title-background:                   #f4f4f4;
+    --accordion-title-text:                         #333333;
+    --accordion-title-hover-background:             #dbdbdb;
+    --accordion-title--hover-text:                  #333333;
+    --accordion-content-background:                 transparent;
+    --accordion-content-text:                       inherit;
+    --accordion-content-background-found:           #333333;
+    --accordion-content-text-found:                 #f4f4f4;
+    --accordion-btn-all-background:                 #f4f4f4;
+    --accordion-btn-all-text:                       #333333;
+    --accordion-btn-all-hover-background:           #dbdbdb;
+    --accordion-btn-all-hover-text:                 #333333;
+    --accordion-btn-pagination-background:          #f4f4f4;
+    --accordion-btn-pagination-text:                #333333;
+    --accordion-btn-pagination-hover-background:    #dbdbdb;
+    --accordion-btn-pagination-hover-text:          #333333;
+    --accordion-btn-pagination-active-background:   #dbdbdb;
+    --accordion-btn-pagination-active-text:         #333333;
+}
 ```
 
 ## Contributing
