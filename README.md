@@ -23,6 +23,8 @@ Recommendation take :
 -  [/dist/accordion-search.min.js](dist/accordion-search.min.js)
 -  [/dist/accordion-search.min.css](dist/accordion-search.min.css)
 
+**Need [Font Awesome](https://github.com/FortAwesome/Font-Awesome) (solid version) if you using default icon**
+
 ## Usage
 
 1) Creation of the html structure
