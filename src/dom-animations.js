@@ -27,13 +27,13 @@ export class DOMAnimations{
 
     static slideDown( element, duration = 500 ){
         element.classList.remove( 'as-d-none' )
+        let height = element.offsetHeight
+        element.style.height = 0
         element.style.overflow = 'hidden'
         element.style.paddingTop = 0
         element.style.paddingBottom = 0
         element.style.marginTop = 0
         element.style.marginBottom = 0
-        let height = element.offsetHeight
-        element.style.height = 0
         element.offsetHeight // redraw
         element.style.transitionProperty = 'height, margin, padding'
         element.style.transitionDuration = duration + 'ms'

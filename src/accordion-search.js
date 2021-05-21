@@ -104,7 +104,7 @@ export default class AccordionSearch{
             divSuggestionBox.appendChild( itemsSuggestionBox )
 
             // add to html
-            this.ctx.querySelector( '.as-search_container' ).after( divSuggestionBox )
+            this.ctx.querySelector( '.as-search-container' ).after( divSuggestionBox )
         }
 
         // Feature "btnOpenCloseAll"
@@ -185,8 +185,13 @@ export default class AccordionSearch{
                 this.elementSearchBtnClear.classList.remove( 'as-d-none' )
 
                 // Feature "searchOnClick"
-                if( ! this.config.searchOnClick ) this.search()
+                if( ! this.config.searchOnClick || e.key == "Enter" ) this.search()
             }
+        } )
+
+        // Input search - Paste
+        this.elementSearchInput.addEventListener( 'paste', (e) => {
+            this.elementSearchInput.dispatchEvent( new KeyboardEvent( 'keyup' ) )
         } )
 
         // Feature "searchOnClick"
@@ -387,7 +392,7 @@ export default class AccordionSearch{
         let currentPaginationItemElement
 
         // Create all items for pagination
-        for ( const index = 0; index < nbItems; index++ ) {
+        for ( let index = 0; index < nbItems; index++ ) {
             let item = document.createElement( 'p' )
             item.innerText = index + 1
             if( currentPaginationItem == index ){

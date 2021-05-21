@@ -44,33 +44,33 @@
   cursor: not-allowed !important;
 }
 
-.as .as-search_container {
+.as .as-search-container {
   display: flex;
   position: relative;
   margin-bottom: 10px;
 }
-.as .as-search_container .as-search__input {
-  padding: 10px 35px 10px 10px;
+.as .as-search-container .as-search__input {
+  padding: 10px 65px 10px 10px;
   border: 1px solid var(--search-input-border);
   border-radius: 25px;
   background: var(--search-input-background);
   outline: 0;
   width: 100%;
 }
-.as .as-search_container .as-search__input::placeholder {
+.as .as-search-container .as-search__input::placeholder {
   color: var(--search-input-placeholder);
 }
-.as .as-search_container .as-search__search_btn,
-.as .as-search_container .as-search__clear_btn {
+.as .as-search-container .as-search__search_btn,
+.as .as-search-container .as-search__clear_btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.as .as-search_container .as-search__clear_btn {
+.as .as-search-container .as-search__clear_btn {
   right: 15px;
   cursor: pointer;
 }
-.as .as-search_container .as-search__search_btn {
+.as .as-search-container .as-search__search_btn {
   right: 40px;
 }
 
@@ -83,18 +83,23 @@
 }
 
 .as .as-search-suggestion-box {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .as .as-search-suggestion-box .as-search-suggestion-box__title {
   color: var(--search-suggestion-box-title);
+  margin-top: 5px;
 }
 .as .as-search-suggestion-box .as-search-suggestion-box__items {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .as .as-search-suggestion-box .as-search-suggestion-box__items > * {
+  margin-top: 5px;
   margin-left: 10px;
   padding: 5px 10px;
   border-radius: 25px;
@@ -123,6 +128,7 @@
   border-radius: 25px;
   transition: background 200ms linear;
   margin: 0;
+  overflow: scroll;
 }
 .as .as-accordion .as-accordion__title:hover {
   background: var(--accordion-title-hover-background);
@@ -148,15 +154,23 @@
 .as .as-accordion-btn-all {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 10px 10px 10px;
 }
 .as .as-accordion-pagination > *,
 .as .as-accordion-btn-all > * {
+  margin: 5px 0 0 0;
   text-align: center;
-  border-radius: 25px;
-  padding: 5px 10px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: background 200ms linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .as .as-accordion-btn-all > * {
@@ -167,10 +181,19 @@
   background: var(--accordion-btn-all-hover-background);
   color: var(--accordion-btn-all-hover-text);
 }
+.as .as-accordion-btn-all .as-accordion-btn-all__open,
+.as .as-accordion-btn-all .as-accordion-btn-all__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .as .as-accordion-btn-all .as-accordion-btn-all__open {
   margin-right: 10px;
 }
 
+.as .as-accordion-pagination {
+  margin-top: 5px;
+}
 .as .as-accordion-pagination > * {
   background: var(--accordion-btn-pagination-background);
   color: var(--accordion-btn-pagination-text);

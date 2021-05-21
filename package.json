@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-js": "webpack --mode=production --optimize-minimize",
-    "dev-js": "webpack --mode=development --watch",
-    "build-css": "sass ./src/assets/sass/style.scss ./dist/accordion-search.css --style compressed --no-source-map && postcss style.css --replace --use autoprefixer",
+    "build-js": "webpack --mode=production --config-name build",
+    "dev-js": "webpack --mode=development --config-name dev --watch",
+    "build-css": "sass ./src/assets/sass/style.scss ./dist/accordion-search.min.css --style compressed --no-source-map && postcss ./dist/accordion-search.min.css --replace --use autoprefixer",
     "dev-css": "sass ./src/assets/sass/style.scss ./dist/accordion-search.css --watch"
   },
   "repository": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/cedricDevWP/accordion-search.git"
   },
   "author": "Cédric Chevillard <cedric.chevillard@cedricchevillard.fr> (https://cedricchevillard.fr)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "mark.js": "^8.11.1",
     "webpack": "^5.37.0",

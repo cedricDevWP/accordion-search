@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="accordion-search.css">
     <style>
+        *{
+            box-sizing: border-box;
+        }
+
         .as .as-accordion p{
             font-size: 14px;
             margin-top: 10px;
@@ -20,7 +24,7 @@
 </head>
 <body>
     <div id="my-accordion-search" class="as">
-        <div class="as-search_container">
+        <div class="as-search-container">
             <input class="as-search__input" type="text" value="" placeholder="Lorem ipsum dolor sit amet"/>
             <span class="as-search__search_btn"></span>
             <span class="as-search__clear_btn"></span>
@@ -187,9 +191,9 @@
     <script src="./accordion-search.js"></script>
     <script>
 
-    let accordionSearch = new AccordionSearch( document.getElementById( 'my-accordion-search' ), {
+    const accordionSearch = new AccordionSearch( document.getElementById( 'my-accordion-search' ), {
         searchOnClick: false,
-        searchOnlyTitle: true,
+        searchOnlyTitle: false,
         caseSensitive: false,
         btnOpenCloseAll: true,
         itemsOpened:[1,5],
@@ -197,7 +201,7 @@
         suggestionBoxTitle: 'Popular Searches:',
         suggestionBoxKeywords: [ 'Title 1', 'Title 2', 'Title 3', '..'],
         pagination: true,
-        paginationLimit: 4,
+        paginationLimit: 7,
         loader: true,
         queryUrl: true,
         queryUrlName: 'myQuery',
